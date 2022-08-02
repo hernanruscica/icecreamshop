@@ -1,0 +1,137 @@
+
+/*VARIABLES GENERALES*/
+:root{
+    --gray-strong: #838383;
+    --gray-medium: #D9D9D9;
+}
+
+
+/*CONFIGURACIONES GENERALES*/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;    
+}
+
+
+/*CABECERA*/
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.8em;
+}
+.header_logo_img{
+    width: 80px;
+    height: auto;
+}
+.header i{
+    font-size: 1.5em;
+    color: var(--gray-medium);
+}
+
+/*BARRA DE NAVEGACION*/
+.nav-bar{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 1em;
+    background-color: cyan;    
+    display: none;
+}
+
+.nav-bar li{
+    list-style: none;
+}
+
+/*Hero image con slideshow*/
+.hero-slideshow{
+    height: 300px;
+    background: url(./imgs/pexels-roman-odintsov-5060297.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 1em ;
+}
+.dots-container{
+    color: white;
+}
+.dots-container i{
+    padding: 0 0.3em;
+    font-size: 0.8em;
+}
+
+
+/*SABORES MODULO*/
+.sabores-modulo{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.sabores-modulo_titulo{
+    color: var(--gray-strong);
+    font-weight: 300;
+}
+
+.sabores_slideshow{
+    display: flex;
+    flex-direction: row;  
+    justify-items: center;
+    align-items: center;
+}
+.sabores_slideshow i{
+    font-size: 2em;
+    color: var(--gray-strong); 
+    padding: 0 0.4em 1.2em 0.4em ;
+}
+.sabores_categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.sabores_categoria_circulo{
+    text-align: center;
+}
+.sabores_categoria_imagen{    
+    width: 70%;
+}
+
+.sabores_categoria_titulo{
+    margin-top: 1em;
+    color: var(--gray-strong);
+}
+.sabores_slideshow_navegacion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    bottom: 0px;
+    left: 0px;
+    color: var(--gray-medium);
+    font-size: 1em;
+}
+.sabores_slideshow_navegacion>.dots-container{
+    color: var(--gray-medium);    
+}
+.sabores_slideshow_navegacion>i{
+    font-size: 2em;
+}
