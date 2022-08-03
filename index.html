@@ -16,15 +16,17 @@
         <div class="header__logo">
             <a href="#"><img class="header_logo_img" src="./imgs/vecteezy_minimal-retro-vintage-style-ice-cream-cone-logo-icon-design__47/vecteezy_minimal-retro-vintage-style-ice-cream-cone-logo-icon-design_.jpg"></a>
         </div>        
-        <a href="#"><i class="fa-solid fa-bars"></i></a>      
+        <a href="#"><i class="fa-solid fa-bars" id = "header_menu_icon"></i></a>      
     </header>
-    <div class="nav-bar">
+    <div class="nav-bar nav-bar-hide" id="nav-bar_modal">
         <ul>
-            <li>
-                <a href="" class="nav-bar__link">Sabores</a>
+            <i class="fa-solid fa-x" id="nav-bar_btn-cerrar"></i>            
+            <li class="nav-bar_desplegable">
+                <a href="" class="nav-bar__link selected" >Sabores</a>
+                <i class="fa-solid fa-plus nav-bar_desplegable_icon" id = "nav-bar_btn-desplegar"></i>
             </li>
             <li>
-                <a href="" class="nav-bar__link">Locales</a>
+                <a href="" class="nav-bar__link ">Locales</a>                
             </li>
             <li>
                 <a href="" class="nav-bar__link">Abrí tu local</a>
@@ -36,8 +38,8 @@
                 <a href="" class="nav-bar__link">contacto</a>
             </li>
             <li class="nav-bar_social">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
+                <a href="#" class="nav-bar__link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="nav-bar__link"><i class="fa-brands fa-facebook"></i></a>
             </li>
         </ul>
     </div>  
