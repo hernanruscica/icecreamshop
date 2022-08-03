@@ -4,6 +4,7 @@ $d = document;
 let $btnMenu = $d.getElementById("header_menu_icon");
 let $modalMenu = $d.getElementById("nav-bar_modal");
 let $categoriaSabores = $d.getElementById("sabores_desplegable");
+let $btnDesplegarSabores = $d.getElementById("nav-bar_btn-desplegar");
 
 console.log($btnMenu, $modalMenu);
 $d.addEventListener("click", (e) => {
@@ -25,7 +26,12 @@ $d.addEventListener("click", (e) => {
     if (e.target.id === "nav-bar_btn-desplegar"){
         console.log("click en el btn de desplegar sabores");
         $categoriaSabores.classList.toggle("nav-bar_sabores_desplegable_hide");
-        
+        $btnDesplegarSabores.classList.toggle("nav-bar_desplegable_icon-rotated");        
     }
     
+    /*Si es un enlace del menu modal */
+    if (e.target.id.includes("modal_menu")){
+        console.log("click en uno de los menues modales");       
+        //$d.getElementById(e.target.id).classList.toggle("selected");
+    }
 });

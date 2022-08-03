@@ -61,7 +61,7 @@ a{
 
 .nav-bar-hide{
     transform: translateX(600px); 
-    transition: all 0.4s ease-out
+    transition: all 0.4s ease-out;
 }
 
 .btn-cerrar{
@@ -71,6 +71,11 @@ a{
     background-color: var(--verde-medium);
     color: #fff;
     padding: 0.6em 0.8em;
+}
+
+.nav-bar_desplegable_icon-rotated{
+    transform: rotate(45deg);
+    transition: all 0.4s ease-out
 }
 
 .nav-bar_desplegable{
@@ -108,9 +113,10 @@ a{
     border: none;
 }
 .nav-bar_desplegable_icon{
-    font-size: 1.4em;
-    transform: rotate(0deg);
+    font-size: 1.8em;
+    /*transform: rotate(0deg);*/
     color: var(--verde-medium);
+    transition: all 0.4s ease-out;
 }
 .nav-bar__link{
     color: var(--black-light);
