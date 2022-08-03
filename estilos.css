@@ -46,25 +46,58 @@ a{
     position: fixed;
     top: 0px;
     right: 0px;
-    width: 90%;
-    padding: 1em;
-    background-color: white;    
+    z-index: 2;
+    width: 90%;    
+    background-color: #fff;    
     display: block;
     text-transform: uppercase;
     padding: 0.5em 2em;   
     transform: translateX(0px); 
-    transition: all 0.8s ease-out;
+    transition: all 0.4s ease-out;
 }
+.nav-bar ul {
+    margin-top: 3em;
+}
+
 .nav-bar-hide{
     transform: translateX(600px); 
-    transition: all 0.8s ease-out
+    transition: all 0.4s ease-out
+}
+
+.btn-cerrar{
+    position: relative;
+    top: 20px;
+    left: 90%;
+    background-color: var(--verde-medium);
+    color: #fff;
+    padding: 0.6em 0.8em;
 }
 
 .nav-bar_desplegable{
     display: flex;
     justify-content: space-between;
 }
-.nav-bar li{
+
+.nav-bar_sabores_desplegable{    
+    display: block;        
+    padding-left: 2em;
+    font-size: 0.9em;
+}
+
+.nav-bar_sabores_desplegable ul {
+    margin-top: 0;
+}
+
+.nav-bar_sabores_desplegable li {
+    list-style: none;
+    margin-bottom: 1em;
+
+}
+.nav-bar_sabores_desplegable_hide {
+    display: none;    
+}
+
+.nav-bar>ul>li{
     list-style: none;
     border-bottom: solid var(--gray-medium) 2px;
     padding-bottom: 0.6em;

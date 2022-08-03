@@ -3,6 +3,7 @@ console.log("desde js");
 $d = document;
 let $btnMenu = $d.getElementById("header_menu_icon");
 let $modalMenu = $d.getElementById("nav-bar_modal");
+let $categoriaSabores = $d.getElementById("sabores_desplegable");
 
 console.log($btnMenu, $modalMenu);
 $d.addEventListener("click", (e) => {
@@ -20,4 +21,11 @@ $d.addEventListener("click", (e) => {
         $modalMenu.classList.toggle("nav-bar-hide");
     }
 
+    /*Boton de desplegar sabores id = "nav-bar_btn-desplegar"*/
+    if (e.target.id === "nav-bar_btn-desplegar"){
+        console.log("click en el btn de desplegar sabores");
+        $categoriaSabores.classList.toggle("nav-bar_sabores_desplegable_hide");
+        
+    }
+    
 });
