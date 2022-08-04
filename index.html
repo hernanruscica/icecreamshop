@@ -21,10 +21,18 @@
     <div class="nav-bar nav-bar-hide" id="nav-bar_modal">
         <i class="fa-solid fa-x btn-cerrar" id="nav-bar_btn-cerrar"></i>    
         <ul>
-            <li class="nav-bar_desplegable">
-                <a href="#sabores" class="nav-bar__link selected" id="modal_menu_sabores">Sabores</a>
+            <li class="nav-bar_desplegable_cabecera">
+                
+                <a href="#sabores" class="nav-bar__link selected" id="modal_menu_sabores" >Sabores</a>                
                 <i class="fa-solid fa-plus nav-bar_desplegable_icon" id = "nav-bar_btn-desplegar"></i>  
+
             </li>
+            <p class="nav-bar_sabores_desplegable nav-bar_sabores_desplegable_hide" id = "sabores_desplegable">
+                <a href="#chocolates" class="nav-bar_desplegable__link selected" id="modal_menu_chocolates">Chocolates</a>
+                <a href="#frutales" class="nav-bar_desplegable__link "  id="modal_menu_frutales">Frutales</a>
+                <a href="#postres" class="nav-bar_desplegable__link "  id="modal_menu_postres">Postres</a>
+            </p>
+            <!--
             <li class="nav-bar_sabores_desplegable nav-bar_sabores_desplegable_hide" id = "sabores_desplegable">
                 <ul >
                     <li><a href="#chocolates" class="nav-bar__link selected" id="modal_menu_chocolates">Chocolates</a></li>
@@ -32,6 +40,7 @@
                     <li><a href="#postres" class="nav-bar__link "  id="modal_menu_postres">Postres</a></li>
                 </ul>
             </li>
+            -->
             <li>
                 <a href="#locales" class="nav-bar__link " id="modal_menu_locales">Locales</a>                
             </li>
@@ -43,6 +52,22 @@
             </li>
             <li>
                 <a href="#contacto" class="nav-bar__link" id="modal_menu_contacto">contacto</a>
+            </li>
+            <li>
+                <details>
+                    <summary>Sabores</summary>
+                    <div class="submenu_contenedor">
+                        <li>
+                            <a href="#chocolates" class="nav-bar__link" id="modal_menu_chocolates">chocolates</a>
+                        </li>
+                        <li>
+                            <a href="#frutales" class="nav-bar__link" id="modal_menu_frutales">frutales</a>
+                        </li>
+                        <li>
+                            <a href="#postres" class="nav-bar__link" id="modal_menu_postres">postres</a>
+                        </li>
+                    </div>
+                </details>
             </li>
             <li class="nav-bar_social">
                 <a href="#" class="nav-bar__link" ><i class="fa-brands fa-instagram" id="modal_menu_ig"></i></a>

@@ -75,7 +75,7 @@ a{
 
 .nav-bar_desplegable_icon-rotated{
     transform: rotate(45deg);
-    transition: all 0.4s ease-out
+    transition: height 0.4s ease-out;
 }
 
 .nav-bar_desplegable{
@@ -83,10 +83,29 @@ a{
     justify-content: space-between;
 }
 
+.nav-bar_desplegable_cabecera{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0px ;
+    margin: 0;
+}
+
 .nav-bar_sabores_desplegable{    
-    display: block;        
+    /*display: block;        */
+    height: 120px;    
+    overflow: hidden;
     padding-left: 2em;
+    padding-top: 0px;
     font-size: 0.9em;
+    transition: height 0.4s ease-out;
+}
+
+.nav-bar_desplegable__link{
+    display: block;
+    padding: 0.5em;
+    color: var(--black-light);
+    font-weight: 700;  
 }
 
 .nav-bar_sabores_desplegable ul {
@@ -99,7 +118,9 @@ a{
 
 }
 .nav-bar_sabores_desplegable_hide {
-    display: none;    
+    /*display: none;    */
+    height: 0px;
+    transition: all 0.4s ease-out;
 }
 
 .nav-bar>ul>li{
@@ -114,9 +135,10 @@ a{
 }
 .nav-bar_desplegable_icon{
     font-size: 1.8em;
-    /*transform: rotate(0deg);*/
+    cursor: pointer;
     color: var(--verde-medium);
     transition: all 0.4s ease-out;
+
 }
 .nav-bar__link{
     color: var(--black-light);
@@ -212,4 +234,18 @@ a{
 }
 .sabores_slideshow_navegacion>i{
     font-size: 2em;
+}
+
+summary {
+ display: block;
+ cursor: pointer;
+}
+
+.submenu_contenedor{
+    padding-top: 0.5em;
+    padding-left: 1em;
+}
+.submenu_contenedor li {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
 }
