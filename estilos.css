@@ -156,9 +156,11 @@ a{
 /*Hero image con slideshow*/
 .hero-slideshow{
     height: 300px;
-    background: url(./imgs/pexels-roman-odintsov-5060297.jpg);
+    /*
+    background: url(./imgs/pexels-roman-odintsov-5060297.jpg);    
     background-size: cover;
     background-position: center;
+    */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,3 +251,98 @@ summary {
     margin-bottom: 0.5em;
     font-size: 0.9em;
 }
+
+
+
+  /* Primer ejemplo de slide */
+  .slider {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* <===  
+    border-radius: 15px;*/    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 1em ;
+  }
+  
+  .slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }  
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide_titulo{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    color: white;    
+  }
+
+  .slide_text{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 0.4em;
+    color: white;   
+    
+  }
+
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 40px;            
+    left: calc(50% - 60px);
+    width: 120px;
+    z-index: 18px;    
+    color: #fff;     
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+
+  /* Primer ejemplo de slide */
+  

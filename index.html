@@ -75,13 +75,55 @@
             </li>
         </ul>
     </div>  
-    <section class="hero-slideshow">
+    
+    <!--
         <div class="dots-container">                                  
             <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
             <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
             <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>            
         </div>
-    </section>
+    -->
+    <div class="slider">        
+        <!-- slide 1 -->
+        <div class="slide" >
+            <img src="./imgs/pexels-jéshoots-3631.jpg" alt="" id="slide01"/>
+            <h1 class="slide_titulo">titulo 1</h1>
+        </div>
+    
+        <!-- slide 2 -->
+        <div class="slide" >
+            <img src="./imgs/pexels-roman-odintsov-5060377.jpg" alt="" id="slide02"/>
+            <h1 class="slide_titulo">titulo 2</h1>
+            <p class="slide_text">Este es un texto de relleno</p>
+        </div>
+    
+        <!-- slide 3 -->
+        <div class="slide" >
+            <img src="./imgs/pexels-roman-odintsov-5061033.jpg" alt="" id="slide03"/>
+            <h1 class="slide_titulo">titulo 3</h1>
+        </div>
+    
+        <!-- slide 4 -->
+        <div class="slide">
+            <img src="./imgs/pexels-roman-odintsov-5061197.jpg" alt="" id="slide04" />
+            <h1 class="slide_titulo">titulo 4</h1>
+        </div>
+    
+        <!-- Control buttons -->
+        <button class="btn btn-next" id = "btn_next"> 
+            <i class="fa-solid fa-angle-right"></i>    
+        </button>
+        <button class="btn btn-prev">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <div class="dots">
+            <i class="fa fa-circle" id = "slide_dot00"></i>
+            <i class="fa fa-circle" id = "slide_dot01"></i>
+            <i class="fa fa-circle" id = "slide_dot02"></i>
+            <i class="fa fa-circle" id = "slide_dot03"></i>
+        </div>
+    </div>
+    
     <section class="sabores-modulo">
         <h2 class="sabores-modulo_titulo">Sabores</h2>
         <div class="sabores_slideshow">    
@@ -110,5 +152,6 @@
     </section>
 
     <script src="scripts.js"></script>
+    <script src="slideshow.js"></script>
 </body>
 </html>
