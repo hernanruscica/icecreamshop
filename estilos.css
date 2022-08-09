@@ -291,7 +291,53 @@ img {
   
   .slide {
     width: 496px;
-    height: 384px;    
+    height: 384px;     
+  }
+
+  .slide_image {
+    filter: brightness(70%);     
+  }
+  
+  .slide_titulo{
+    position: absolute;
+    top: 10%;
+    margin-left: 2em;    
+    z-index: 1;        
+    font-weight: 300;
+    color: #f3f3f3;
+    letter-spacing: 0.4em;
+  }
+
+  .slide_parrafo {
+    position: absolute;
+    top: 20%;
+    margin-left: 3em;    
+    width: 300px;
+    z-index: 1;        
+    font-weight: 500;
+    color: #f3f3f3;
+    letter-spacing: 0.2em;
+    line-height: 1.8em;
+  }
+
+  .slide_enlace{
+    position: absolute;
+    top: 35%;
+    margin-left: 2.6em;  
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    z-index: 1;  
+    font-size: 1.2em;
+    text-decoration: none;
+    background:aquamarine;
+    color: var(--black-light);
+  }
+
+  .slide_enlace:active,
+  .slide_enlace:hover{
+    background-color: var(--verde-medium);
+    color: aquamarine;
   }
   
   .prev,
