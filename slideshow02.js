@@ -67,7 +67,7 @@ function dragEnd() {
     2. prev slide
     3. stay still
     */
-   let dragMovement = 100; //248
+   let dragMovement = 50; //248
   finalPosition = slides.offsetLeft;
   if (finalPosition - initialPosition < -dragMovement) {
     switchSlide("next", "dragging");
