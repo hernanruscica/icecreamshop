@@ -6,7 +6,10 @@ let $modalMenu = $d.getElementById("nav-bar_modal");
 let $categoriaSabores = $d.getElementById("sabores_desplegable");
 let $btnDesplegarSabores = $d.getElementById("nav-bar_btn-desplegar");
 
-console.log($btnMenu, $modalMenu);
+//console.log($btnMenu, $modalMenu);
+
+
+
 $d.addEventListener("click", (e) => {
     console.log(e.target.id);
 
@@ -33,5 +36,10 @@ $d.addEventListener("click", (e) => {
     if (e.target.id.includes("modal_menu")){
         console.log("click en uno de los menues modales");       
         //$d.getElementById(e.target.id).classList.toggle("selected");
+    }
+
+    if (e.target.id.includes("slide_dot")){
+        let indice = parseInt(e.target.id.slice(-1));
+        console.log(indice, typeof indice);        
     }
 });

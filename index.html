@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body >
     <header class="header container">
         <div class="header__logo">
             <a href="#"><img class="header_logo_img" src="./imgs/vecteezy_minimal-retro-vintage-style-ice-cream-cone-logo-icon-design__47/vecteezy_minimal-retro-vintage-style-ice-cream-cone-logo-icon-design_.jpg"></a>
@@ -75,83 +75,72 @@
             </li>
         </ul>
     </div>  
+    <section class="container">
+        <div class="slider">
+            <div class="slides" id="slides">
+                <span class="slide">
+                    <img src="./imgs/pexels-jéshoots-3631-small.jpg" alt="" />            
+                </span>
+                <span class="slide">
+                    <img src="./imgs/pexels-roman-odintsov-5060377-small.jpg" alt="" />
+                </span>
+                <span class="slide">
+                    <img src="./imgs/pexels-roman-odintsov-5061033-small.jpg" alt="" />
+                </span>
+                <span class="slide">
+                    <img src="./imgs/pexels-roman-odintsov-5061197-small.jpg" alt="" />
+                </span>
+            </div>
     
-    <!--
-        <div class="dots-container">                                  
-            <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
-            <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
-            <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>            
-        </div>
-    -->
-    <div class="slider">        
-        <!-- slide 1 -->
-        <div class="slide" >
-            <img src="./imgs/pexels-jéshoots-3631-small.jpg" alt="" id="slide01"/>
-            <h1 class="slide_titulo">titulo 1</h1>
-        </div>
+            <a href="#" id="prev" class="prev">
+            <i class="fas fa-caret-left"></i>
+            </a>
+            <a href="#" id="next" class="next">
+            <i class="fas fa-caret-right"></i>
+            </a>
+            
+            <div class="dots">
+                <i class="fa fa-circle" id = "slide_dot00"></i>
+                <i class="fa fa-circle" id = "slide_dot01"></i>
+                <i class="fa fa-circle" id = "slide_dot02"></i>
+                <i class="fa fa-circle" id = "slide_dot03"></i>
+            </div>
+            
+        </div>    
+    </section>
+
+        
     
-        <!-- slide 2 -->
-        <div class="slide" >
-            <img src="./imgs/pexels-roman-odintsov-5060377-small.jpg" alt="" id="slide02"/>
-            <h1 class="slide_titulo">titulo 2</h1>
-            <p class="slide_text">Este es un texto de relleno</p>
-        </div>
-    
-        <!-- slide 3 -->
-        <div class="slide" >
-            <img src="./imgs/pexels-roman-odintsov-5061033-small.jpg" alt="" id="slide03"/>
-            <h1 class="slide_titulo">titulo 3</h1>
-        </div>
-    
-        <!-- slide 4 -->
-        <div class="slide">
-            <img src="./imgs/pexels-roman-odintsov-5061197-small.jpg" alt="" id="slide04" />
-            <h1 class="slide_titulo">titulo 4</h1>
-        </div>
-    
-        <!-- Control buttons -->
-        <button class="btn btn-next" id = "btn_next"> 
-            <i class="fa-solid fa-angle-right"></i>    
-        </button>
-        <button class="btn btn-prev">
-            <i class="fa-solid fa-angle-left"></i>
-        </button>
-        <div class="dots">
-            <i class="fa fa-circle" id = "slide_dot00"></i>
-            <i class="fa fa-circle" id = "slide_dot01"></i>
-            <i class="fa fa-circle" id = "slide_dot02"></i>
-            <i class="fa fa-circle" id = "slide_dot03"></i>
-        </div>
-    </div>
-    
-    <section class="sabores-modulo">
-        <h2 class="sabores-modulo_titulo">Sabores</h2>
-        <div class="sabores_slideshow">    
-            <i class="fa-solid fa-angle-left"></i>        
-            <div class="sabores_categoria">
-                <div class="sabores_categoria_circulo">
-                    <img src="./imgs/sabores_chocolate.png" alt="" class="sabores_categoria_imagen">
-                </div>                
-                <p class="sabores_categoria_titulo">Chocolates</p>
-            </div>   
-            <div class="sabores_categoria">
-                <div class="sabores_categoria_circulo">
-                    <img src="./imgs/sabores_frutales.png" alt="" class="sabores_categoria_imagen">
-                </div>
-                <p class="sabores_categoria_titulo">Frutales</p>
-            </div> 
-            <i class="fa-solid fa-angle-right"></i>
-        </div>
-        <div class="sabores_slideshow_navegacion">               
-            <div class="dots-container">                                  
-                <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
-                <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
-                <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>            
-            </div>             
+    <section class="container">
+        <div class="sabores-modulo">
+            <h2 class="sabores-modulo_titulo">Sabores</h2>
+            <div class="sabores_slideshow">    
+                <i class="fa-solid fa-angle-left"></i>        
+                <div class="sabores_categoria">
+                    <div class="sabores_categoria_circulo">
+                        <img src="./imgs/sabores_chocolate.png" alt="" class="sabores_categoria_imagen">
+                    </div>                
+                    <p class="sabores_categoria_titulo">Chocolates</p>
+                </div>   
+                <div class="sabores_categoria">
+                    <div class="sabores_categoria_circulo">
+                        <img src="./imgs/sabores_frutales.png" alt="" class="sabores_categoria_imagen">
+                    </div>
+                    <p class="sabores_categoria_titulo">Frutales</p>
+                </div> 
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="sabores_slideshow_navegacion">               
+                <div class="dots-container">                                  
+                    <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
+                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
+                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>            
+                </div>             
+            </div>
         </div>
     </section>
 
     <script src="scripts.js"></script>
-    <script src="slideshow.js"></script>
+    <script src="slideshow02.js"></script>
 </body>
 </html>
