@@ -78,17 +78,14 @@
     <section class="container">
         <div class="slider">
             <div class="slides" id="slides">
-                <span class="slide">
+                <span class="slide">                    
                     <h2 class="slide_titulo">
                         Titulo 1
                     </h2>      
                     <p class="slide_parrafo">
                         Este es un parrafo de ejemplo para un slide
-                    </p>       
-                    <a href="#" class="slide_enlace">Ver mas</a>       
+                    </p>                               
                     <img src="./imgs/pexels-jéshoots-3631-small.jpg" class="slide_image" alt="" />  
-                    
-
                 </span>
                 <span class="slide">
                     <h2 class="slide_titulo">
@@ -96,8 +93,7 @@
                     </h2>      
                     <p class="slide_parrafo">
                         Los mejores helados del condado
-                    </p>       
-                    <a href="#" class="slide_enlace">Ver mas</a>  
+                    </p>                           
                     <img src="./imgs/pexels-roman-odintsov-5060377-small.jpg" class="slide_image" alt="" />
                 </span>
                 <span class="slide">
@@ -106,8 +102,7 @@
                     </h2>      
                     <p class="slide_parrafo">
                         A cuanto tenes el CUCU??
-                    </p>       
-                    <a href="#" class="slide_enlace">Ver mas</a>  
+                    </p>                           
                     <img src="./imgs/pexels-roman-odintsov-5061033-small.jpg" class="slide_image" alt="" />
                 </span>
                 <span class="slide">
@@ -116,8 +111,7 @@
                     </h2>      
                     <p class="slide_parrafo">
                         Cucuruchon, cucurucho y cucuruchito
-                    </p>       
-                    <a href="#" class="slide_enlace">Ver mas</a>  
+                    </p>                            
                     <img src="./imgs/pexels-roman-odintsov-5061197-small.jpg" class="slide_image" alt="" />
                 </span>
             </div>
@@ -138,12 +132,49 @@
             
         </div>    
     </section>        
-    
     <section class="container">
+        <div class="cards_slider__container">
+            <div class="cards_slider">
+                <div class="cards_slider__card">
+                    <div class="cards_slider__card__circle-img"></div>
+                    <img src="./imgs/sabores_chocolate.png" alt="chocolates" class="cards_slider__card__img">
+                    <h3 class="cards_slider__card__title">Chocolates</h3>
+                    <p class="cards_slider__card__paragraph">lorem ipsun clorum</p>
+                    <a href="#" class="cards_slider__card__link">Enlace</a>
+                </div>  
+                <div class="cards_slider__card">
+                    <div class="cards_slider__card__circle-img"></div>
+                    <img src="./imgs/sabores_frutales.png" alt="frutales" class="cards_slider__card__img">
+                    <h3 class="cards_slider__card__title">Frutales</h3>
+                    <p class="cards_slider__card__paragraph">lorem ipsun clorum</p>
+                    <a href="#" class="cards_slider__card__link">Enlace</a>
+                </div>    
+                <div class="cards_slider__card">
+                    <div class="cards_slider__card__circle-img"></div>
+                    <img src="./imgs/sabores_cremas.png" alt="cremas" class="cards_slider__card__img">
+                    <h3 class="cards_slider__card__title">Cremas</h3>
+                    <p class="cards_slider__card__paragraph">lorem ipsun clorum</p>
+                    <a href="#" class="cards_slider__card__link">Enlace</a>
+                </div>                         
+            </div>
+            <div class="cards_navegation">  
+                <i class="fa-solid fa-angle-left cards_navegation_arrow" id="cards_navegation_prev"></i>               
+                <div class="cards_navegation_dots">                                  
+                    <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
+                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
+                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>                                
+                </div>             
+                <i class="fa-solid fa-angle-right cards_navegation_arrow" id="cards_navegation_next"></i>
+            </div>
+        </div>
+
+    </section>
+    <!--
+    <section class="container">        
         <div class="sabores-modulo">
             <h2 class="sabores-modulo_titulo">Sabores</h2>
-            <div class="sabores_slideshow">    
-                <i class="fa-solid fa-angle-left"></i>        
+            <div class="sabores_slideshow">         
+                
                 <div class="sabores_categoria">
                     <div class="sabores_categoria_circulo">
                         <img src="./imgs/sabores_chocolate.png" alt="" class="sabores_categoria_imagen">
@@ -156,19 +187,37 @@
                     </div>
                     <p class="sabores_categoria_titulo">Frutales</p>
                 </div> 
-                <i class="fa-solid fa-angle-right"></i>
+                <div class="sabores_categoria">
+                    <div class="sabores_categoria_circulo">
+                        <img src="./imgs/sabores_postres.png" alt="" class="sabores_categoria_imagen">
+                    </div>
+                    <p class="sabores_categoria_titulo">Postres</p>
+                </div>  
+                <div class="sabores_categoria">
+                    <div class="sabores_categoria_circulo">
+                        <img src="./imgs/sabores_postres.png" alt="" class="sabores_categoria_imagen">
+                    </div>
+                    <p class="sabores_categoria_titulo">Postres</p>
+                </div>    
+                            
             </div>
-            <div class="sabores_slideshow_navegacion">               
+            
+            <div class="sabores_slideshow_navegacion">  
+                <i class="fa-solid fa-angle-left"></i>               
                 <div class="dots-container">                                  
                     <i class="fa-solid fa-circle" id="hero_slideshow_dot01"></i>                        
                     <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot02"></i>
-                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>            
+                    <i class="fa-solid fa-circle-dot" id="hero_slideshow_dot03"></i>                                
                 </div>             
+                <i class="fa-solid fa-angle-right"></i>
             </div>
+            
         </div>
+              
     </section>
-
+-->
     <script src="scripts.js"></script>
-    <script src="slideshow02.js"></script>
+    <script src="slideshow.js"></script>
+    <script src="./cardsslides.js"></script>
 </body>
 </html>

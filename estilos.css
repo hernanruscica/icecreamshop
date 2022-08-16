@@ -185,13 +185,18 @@ a{
 
 
 /*SABORES MODULO*/
-.sabores-modulo{
-    height: 260px;
+.sabores-modulo{    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     position: absolute;
+    overflow: hidden;   
+    width: 100%;
+    max-width: 496px;
+    min-width: 360px;
+    height: 260px;
+    border: #49BC54 solid 1px;
 }
 
 .sabores-modulo_titulo{
@@ -202,8 +207,10 @@ a{
 .sabores_slideshow{
     display: flex;
     flex-direction: row;  
-    justify-items: center;
-    align-items: center;
+    justify-items: left;  
+    align-items: center;  
+    border: rebeccapurple solid 1px;
+    height: 80%;    
 }
 .sabores_slideshow i{
     font-size: 2em;
@@ -215,6 +222,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    
 }
 
 .sabores_categoria_circulo{
@@ -229,21 +237,32 @@ a{
     color: var(--gray-strong);
 }
 .sabores_slideshow_navegacion{
-    position: relative;
+    position: absolute;    
+    top: 0px;    
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;    
-    bottom: 0px;
-    left: 0px;
+    justify-items: center;
+    width: 100%;  
+    height: 100%;      
     color: var(--gray-medium);
-    font-size: 1em;
+    font-size: 1em;    
+    z-index: 30;
+    border: solid black 1px;  
 }
 .sabores_slideshow_navegacion>.dots-container{
-    color: var(--gray-medium);    
+    color: var(--gray-medium);  
+    border: solid black 1px;  
+    width: 100%;    
+    text-align: center;
+    height: 2.2em;
+    align-self: flex-end;
 }
 .sabores_slideshow_navegacion>i{
     font-size: 2em;
+    border: solid black 1px;
+    color: #CDCDCD;
+    height: 0.8em;
 }
 
 summary {
@@ -294,6 +313,7 @@ img {
     height: 384px;     
   }
 
+
   .slide_image {
     filter: brightness(70%);     
   }
@@ -330,12 +350,13 @@ img {
     z-index: 1;  
     font-size: 1.2em;
     text-decoration: none;
-    background:aquamarine;
+    background-color:aquamarine;
     color: var(--black-light);
   }
 
-  .slide_enlace:active,
+  
   .slide_enlace:hover{
+    transform: scale(1.02);
     background-color: var(--verde-medium);
     color: aquamarine;
   }
@@ -377,4 +398,65 @@ cursor: pointer;
 
 
 
-  
+
+.cards_slider__container{
+    position: relative;    
+    height: 300px;
+    width: 80%;    
+    min-width: 360px;
+    margin: 0 auto;   
+}
+
+.cards_slider{    
+    width: 100%;    
+    border: solid 1px #49BC54;   
+    padding: 1.4em 1em;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+}
+
+.cards_slider__card{
+    width: 28%;  
+    max-width: 180px;  
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: space-between;
+    border: #838383 1px solid;
+    padding: 0em 1em 1em 1em;    
+}
+
+.cards_slider__card__paragraph{
+    text-align: center;
+}
+.cards_navegation{
+    position: absolute;        
+    bottom: 30px;
+    font-size: 1.2em;
+    left: 0;    
+    width: 100%;   
+    height: 90%; 
+    padding: 0em 0.6em;
+    border: solid 1px #49BC54; 
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;  
+    align-items: center;  
+    color: #838383;
+}
+
+.cards_navegation>*{
+    border: solid 1px #49BC54; 
+}
+.cards_navegation_dots{
+    font-size: 0.8em;
+    align-self: flex-end;
+}
+.cards_navegation_arrow{
+    font-size: 2.2em;    
+    cursor: pointer;
+}
+
+

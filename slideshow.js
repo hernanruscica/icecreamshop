@@ -1,98 +1,150 @@
-"use strict";
+const slides = document.getElementById("slides");
+const allSlides = document.querySelectorAll(".slide");
+const slidesLength = allSlides.length;
+const slideWidth = allSlides[0].offsetWidth;
 
-/******************************** 
-DOM elements
- ***************************************/
+let index = 0;
+let posX1;
+let posX2;
+let initialPosition;
+let finalPosition;
 
-// Select all slides
-const $slides = document.querySelectorAll(".slide");
-// select next slide button
-const $nextSlide = document.querySelector(".btn-next");
-// select next slide button
-const $prevSlide = document.querySelector(".btn-prev");
+let canISlide = true;
+
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+const firstSlide = allSlides[0];
+const lastSlide = allSlides[allSlides.length - 1];
+
+const cloneFirstSlide = firstSlide.cloneNode(true);
+const cloneLastSlide = lastSlide.cloneNode(true);
+
+slides.appendChild(cloneFirstSlide);
+slides.insertBefore(cloneLastSlide, firstSlide);
+
+next.addEventListener("click", () => switchSlide("next"));
+prev.addEventListener("click", () => switchSlide("prev"));
+
+slides.addEventListener("transitionend", checkIndex);
+
+slides.addEventListener("mousedown", dragStart);
+
+slides.addEventListener("touchstart", dragStart);
+slides.addEventListener("touchmove", dragMove);
+slides.addEventListener("touchend", dragEnd);
+
+function dragStart(e) {
+  e.preventDefault();
+  initialPosition = slides.offsetLeft;
+
+  if (e.type == "touchstart") {
+    posX1 = e.touches[0].clientX;
+  } else {
+    posX1 = e.clientX;
+
+    document.onmouseup = dragEnd;
+    document.onmousemove = dragMove;
+  }
+}
+
+function dragMove(e) {
+  if (e.type == "touchmove") {
+    posX2 = posX1 - e.touches[0].clientX;
+    posX1 = e.touches[0].clientX;
+  } else {
+    posX2 = posX1 - e.clientX;
+    posX1 = e.clientX;
+  }
+
+  slides.style.left = `${slides.offsetLeft - posX2}px`;
+}
+
+function dragEnd() {
+  /* 
+    three possibilities:
+    1. next slide
+    2. prev slide
+    3. stay still
+    */
+  let dragMovement = 100; //248
+  finalPosition = slides.offsetLeft;
+  if (finalPosition - initialPosition < -dragMovement) {
+    switchSlide("next", "dragging");
+  } else if (finalPosition - initialPosition > dragMovement) {
+    switchSlide("prev", "dragging");
+  } else {
+    slides.style.left = `${initialPosition}px`;
+  }
+
+  document.onmouseup = null;
+  document.onmousemove = null;
+}
+
+function switchSlide(arg, arg2) {
+  slides.classList.add("transition");
+  //console.log("empieza bloqueo del mouse", canISlide);
+
+  if (canISlide) {
+    if (!arg2) {
+      initialPosition = slides.offsetLeft;
+    }
+    if (arg == "next") {
+      slides.style.left = `${initialPosition - slideWidth}px`;
+      index++;
+    } else {
+      slides.style.left = `${initialPosition + slideWidth}px`;
+      index--;
+    }
+    cargarIndices();
+  }
+
+  canISlide = false;
+}
+
+function checkIndex() {
+  slides.classList.remove("transition");
+  //console.log("termina bloqueo del mouse", canISlide);
+  if (index == -1) {
+    slides.style.left = `-${slidesLength * slideWidth}px`;
+    index = slidesLength - 1;
+  }
+
+  if (index == slidesLength) {
+    slides.style.left = `-${1 * slideWidth}px`;
+    index = 0;
+  }
+
+  canISlide = true;
+}
+
 //select all dots indexes
 const $dots = document.querySelectorAll(".dots>i");
-//console.log($dots);
-
-/******************************** 
- variables globales
- ***************************************/
-// current slide counter
-let curSlide = 0;
-// maximum number of $slides
-let maxSlide = $slides.length - 1;
-
-
-// loop through $slides and set each $slides translateX
-$slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-
 const cargarIndices = () => {
-    $dots.forEach((dot, index) => {
-        //console.log(dot, curSlide);
-        if(index === curSlide){        
+    $dots.forEach((dot, dotIndex) => {
+        let indiceInterno = 0;       
+        switch (index){
+            case -1:
+                indiceInterno = 3;
+            break;
+            case 4:
+                indiceInterno = 0;
+            break;
+            default:
+                indiceInterno = index;
+            break;
+        }
+
+        //console.log(dotIndex, indiceInterno);
+        if(dotIndex === indiceInterno){        
             dot.classList.add("fa-dot-circle");        
         }else{
             dot.classList.remove("fa-dot-circle");
-        }
+        }        
     })
 };
 cargarIndices();
 
-/******************************** 
- addEventListener
- ***************************************/
-// add event listener and navigation functionality
-$nextSlide.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-  //   move slide by -100%
-  $slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-  cargarIndices();
-});
 
-// add event listener and navigation functionality
-$prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
-  }
-  //   move slide by 100%
-  $slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-  cargarIndices();
-});
-
-//add event listener for the dots navigation
-$dots.forEach((dot) => {
-    //console.log(dot);
-    dot.addEventListener("click", (e) => {
-        let idActual = e.target.id;
-        let idActualNumber = parseInt(idActual.slice(-1));
-        //console.log(idActualNumber, typeof idActualNumber);
-        if (idActualNumber !== curSlide){
-            //console.log("indice distinto a la actual diapositiva");
-            curSlide = idActualNumber;
-            //   move slide by 100%
-            $slides.forEach((slide, indx) => {
-                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-            });   
-            cargarIndices();
-        }else{
-            //console.log("indice igual a la actual diapositiva");
-        }
-    });
-})
-
-
-
+/* <div class="bloqueo_mouse" id="bloqueo_slide"></div> */
+const $bloqueSlide = $d.getElementById("bloqueo_slide");

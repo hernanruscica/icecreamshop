@@ -9,9 +9,8 @@ let $btnDesplegarSabores = $d.getElementById("nav-bar_btn-desplegar");
 //console.log($btnMenu, $modalMenu);
 
 
-
 $d.addEventListener("click", (e) => {
-    console.log(e.target.id);
+    //console.log(e.target.id);
 
     /*Boton del mennu en el header */
     if (e.target.id === "header_menu_icon"){
@@ -41,5 +40,8 @@ $d.addEventListener("click", (e) => {
     if (e.target.id.includes("slide_dot")){
         let indice = parseInt(e.target.id.slice(-1));
         console.log(indice, typeof indice);        
+    }
+    if (e.target.id === "bloqueo_slide"){
+        console.log("click en el bloqueador de slide");
     }
 });
